@@ -20,7 +20,6 @@ Thanh toán (có thể đơn giản là lưu đơn hàng hoặc tích hợp than
 ```
 ## Chức năng 
 
-```
 +)Chức năng chính của hệ thống:
 
 Quản lý danh mục điện thoại
@@ -56,6 +55,5 @@ Giao diện dễ dùng
 Bảo mật đăng nhập (ở mức cơ bản)
 
 Tốc độ xử lý nhanh (ở mức mô phỏng)
-```
 
 
