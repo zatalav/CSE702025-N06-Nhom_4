@@ -1,10 +1,13 @@
 <h1> Mobistore </h1>
+
 thành viên 
+<h6>
 lê mạnh hùng
 nguyễn kiêm mạnh
 nguyễn văn mạnh
 lê quốc trình
-</hr>
+
+
 ND chính: 
 Tìm kiếm sản phẩm.
 Lọc theo hãng (Samsung, iPhone...), giá, RAM, bộ nhớ,...
@@ -14,3 +17,4 @@ Thanh toán (có thể đơn giản là lưu đơn hàng hoặc tích hợp than
 Đăng nhập/đăng ký (nếu cần quản lý tài khoản khách hàng).
 
 
+</h6>
