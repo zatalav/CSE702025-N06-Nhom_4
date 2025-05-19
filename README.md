@@ -18,9 +18,9 @@ Xóa/sửa số lượng trong giỏ hàng.
 Thanh toán (có thể đơn giản là lưu đơn hàng hoặc tích hợp thanh toán online).
 Đăng nhập/đăng ký (nếu cần quản lý tài khoản khách hàng).
 ```
-## Chức năng 
+## Chức năng chính 
 
-+)Chức năng chính của hệ thống:
++)Admin:
 
 Quản lý danh mục điện thoại
 
@@ -36,11 +36,14 @@ Quản lý nhân viên (nếu có)
 
 Đăng nhập/đăng xuất cho admin
 
-+)Đối tượng sử dụng:
-
-Quản trị viên (Admin)
-
-Khách hàng
++)Khách hàng 
+	Xem danh sách sản phẩm
+	Tìm kiếm sản phẩm theo tên/hãng/giá
+  Xem chi tiết sản phẩm
+	Đăng ký tài khoản / Đăng nhập
+	Thêm sản phẩm vào giỏ hàng
+	Đặt hàng
+	Xem lịch sử đơn hàng đã đặt
 
 +)Phạm vi của hệ thống:
 
