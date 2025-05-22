@@ -1,62 +1,72 @@
-<h1> Mobistore </h1>
+# 💻 TECHMART – Hệ thống thương mại điện tử chuyên ngành công nghệ
 
-# thành viên 
 
-```
-lê mạnh hùng
-nguyễn kiêm mạnh
-nguyễn văn mạnh
-lê quốc trình
-```
+📖 **Môn học:** Kỹ thuật Phần mềm
 
-## ND chính: 
-```
-Tìm kiếm sản phẩm.
-Lọc theo hãng (Samsung, iPhone...), giá, RAM, bộ nhớ,...
-Thêm sản phẩm vào giỏ hàng.
-Xóa/sửa số lượng trong giỏ hàng.
-Thanh toán (có thể đơn giản là lưu đơn hàng hoặc tích hợp thanh toán online).
-Đăng nhập/đăng ký (nếu cần quản lý tài khoản khách hàng).
-```
-## Chức năng chính 
+🌐 **Tên dự án:** `TechMart` – Hệ thống thương mại điện tử chuyên ngành công nghệ
 
-+)Admin:
+👨‍💻 **Nhóm thực hiện:** Nhóm [4] – Lớp [Kĩ thuật phần mềm - N06]
 
-Quản lý danh mục điện thoại
+### 👥 **Danh sách thành viên**
+<div align="center">
 
-Quản lý sản phẩm (điện thoại cụ thể: iPhone, Samsung…)
+| 🆔 **STT** | 👤 **Họ và Tên**  | 📧 **Email** |
+|:-:|:-----------------------|:--------------------------------------------------------------------------|
+| 1 | **Lê Mạnh Hùng**       | [23010123@st.phenikaa-uni.edu.vn](mailto:23010123@st.phenikaa-uni.edu.vn) |
+| 2 | **Lê Quốc Trình**      | [23010149@st.phenikaa-uni.edu.vn](mailto:23010149@st.phenikaa-uni.edu.vn) |
+| 3 | **Nguyễn Văn Mạnh**    | [23010599@st.phenikaa-uni.edu.vn](mailto:23010599@st.phenikaa-uni.edu.vn) |
+| 4 | **Nguyễn Kiêm Mạnh**   | [23010909@st.phenikaa-uni.edu.vn](mailto:23010909@st.phenikaa-uni.edu.vn) |
 
-Quản lý khách hàng
+</div>
 
-Quản lý đơn hàng (đặt hàng, thanh toán)
+# 📝 KẾ HOẠCH DỰ ÁN – TECHMART
 
-Quản lý tồn kho
+## 1. 🎯 Mục tiêu dự án
 
-Quản lý nhân viên (nếu có)
+- **Xây dựng một hệ thống thương mại điện tử cho phép người dùng:**
 
-Đăng nhập/đăng xuất cho admin
+	- *Xem và tìm kiếm các sản phẩm công nghệ.*
+	- *Thêm sản phẩm vào giỏ hàng, thanh toán đơn hàng.*
+	- *Quản lý tài khoản cá nhân (đăng ký, đăng nhập).*
+   
+- **Cho phép quản trị viên:**
+  
+	- *Quản lý danh mục sản phẩm, đơn hàng và người dùng.*
+  	- *Hướng đến một giao diện thân thiện, hiện đại và dễ sử dụng.*
 
-+)Khách hàng 
-	Xem danh sách sản phẩm
-	Tìm kiếm sản phẩm theo tên/hãng/giá
-  Xem chi tiết sản phẩm
-	Đăng ký tài khoản / Đăng nhập
-	Thêm sản phẩm vào giỏ hàng
-	Đặt hàng
-	Xem lịch sử đơn hàng đã đặt
+## 2. 📦 Phạm vi dự án
+### Chức năng chính:
+- ✅ **Người dùng:**
 
-+)Phạm vi của hệ thống:
+	- *Đăng ký, đăng nhập.*
+	- *Tìm kiếm, lọc và xem chi tiết sản phẩm.*
+	- *Thêm sản phẩm vào giỏ hàng, đặt hàng, thanh toán.*
+	- *Xem lịch sử mua hàng.*
 
-Là website bán điện thoại đơn giản
+- ✅ **Quản trị viên:**
 
-Tích hợp thanh toán online thực tế (chỉ mô phỏng)
+	- *Thêm/xóa/sửa sản phẩm.*
+	- *Quản lý danh mục sản phẩm.*
+	- *Xem đơn hàng và trạng thái thanh toán.*
+	- *Quản lý tài khoản người dùng.*
 
-+)Yêu cầu phi chức năng:
+### Công nghệ sử dụng:
 
-Giao diện dễ dùng
+- ***Frontend:** 🌐`HTML`, 🎨`CSS`, ⚙️`JavaScript`, 💠`Bootstrap`.*
+- ***Backend:** 🐘🔴`PHP/Laravel`.*
+- ***Cơ sở dữ liệu:** 🐬`MySQL`.*
+- ***Công cụ quản lý mã nguồn:** 🐙`GitHub`.*
 
-Bảo mật đăng nhập (ở mức cơ bản)
 
-Tốc độ xử lý nhanh (ở mức mô phỏng)
+## 3. 🗓️ Tiến độ dự án (Dự kiến)
+## 4. 👨‍💻 Phân công công việc
+## 5. 🧪 Chiến lược kiểm thử
+
+- Kiểm thử đơn vị (Unit test): Kiểm tra các chức năng nhỏ riêng biệt.
+- Kiểm thử tích hợp (Integration test): Kiểm tra tương tác giữa các module.
+- Kiểm thử hệ thống (System test): Kiểm tra toàn bộ hệ thống.
+- Kiểm thử chấp nhận (User Acceptance Test): Kiểm tra theo tình huống người dùng.
+
+# 📄 SRS (Software Requirements Specification) – Phân tích yêu cầu và đặc tả
 
 
