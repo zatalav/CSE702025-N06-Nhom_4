@@ -214,67 +214,97 @@ Database Server (MySQL): Lưu trữ dữ liệu sản phẩm, người dùng, đ
 | **categories**   | Lưu danh mục sản phẩm (tên, mô tả)                               |
 | **orders**       | Lưu thông tin đơn hàng (user\_id, thời gian đặt, tổng tiền...)   |
 | **order\_items** | Chi tiết đơn hàng: mỗi dòng là 1 sản phẩm trong đơn hàng         |
-| **cart\_items**  | Sản phẩm người dùng đã thêm vào giỏ hàng (nếu dùng giỏ tạm thời) |
+| **cart\_items**  | Sản phẩm người dùng đã thêm vào giỏ hàng |
+| **product\_variants**  | Phiên bản sản phẩm |
 
 ### 3.2 Chi tiết các bảng
 
 #### Bảng `users`
-| Tên cột     | Kiểu dữ liệu      | Mô tả           |
-| ----------- | ----------------- | --------------- |
-| id          | INT (PK)          | Mã người dùng   |
-| name        | VARCHAR(100)      | Tên             |
-| email       | VARCHAR(100)      | Email           |
-| password    | VARCHAR(255)      | Mật khẩu (hash) |
-| role        | ENUM(User, Admin) | Vai trò         |
-| created\_at | DATETIME          | Ngày tạo        |
+
+| Tên cột        | Kiểu dữ liệu              | Ràng buộc                    | Mô tả              |
+| -------------- | ------------------------- | ---------------------------- | ------------------ |
+| user\_id       | INT                       | PRIMARY KEY, AUTO\_INCREMENT | ID người dùng      |
+| name           | VARCHAR(100)              | NOT NULL                     | Tên người dùng     |
+| email          | VARCHAR(100)              | UNIQUE                       | Email (duy nhất)   |
+| password\_hash | VARCHAR(255)              | NOT NULL                     | Mật khẩu đã mã hóa |
+| phone          | VARCHAR(20)               |                              | Số điện thoại      |
+| address        | TEXT                      |                              | Địa chỉ người dùng |
+| role           | ENUM('customer', 'admin') | DEFAULT 'customer'           | Vai trò người dùng |
+| created\_at    | DATETIME                  | DEFAULT CURRENT\_TIMESTAMP   | Ngày tạo tài khoản |
 
 #### Bảng `products`
-| Tên cột      | Kiểu dữ liệu  | Mô tả                          |
-| ------------ | ------------- | ------------------------------ |
-| id           | INT (PK)      | Mã sản phẩm                    |
-| name         | VARCHAR(100)  | Tên sản phẩm                   |
-| price        | DECIMAL(10,2) | Giá bán                        |
-| description  | TEXT          | Mô tả                          |
-| image        | VARCHAR(255)  | Link ảnh                       |
-| category\_id | INT (FK)      | Liên kết với bảng `categories` |
-| quantity     | INT           | Số lượng tồn kho               |
-
-
+| Tên cột         | Kiểu dữ liệu  | Ràng buộc                              | Mô tả                  |
+| --------------- | ------------- | -------------------------------------- | ---------------------- |
+| product\_id     | INT           | PRIMARY KEY, AUTO\_INCREMENT           | ID sản phẩm            |
+| name            | VARCHAR(255)  | NOT NULL                               | Tên sản phẩm           |
+| description     | TEXT          |                                        | Mô tả sản phẩm         |
+| price           | DECIMAL(10,2) | NOT NULL                               | Giá cơ bản sản phẩm    |
+| stock\_quantity | INT           |                                        | Số lượng tồn kho       |
+| category\_id    | INT           | FOREIGN KEY -> categories.category\_id | ID danh mục sản phẩm   |
+| image\_url      | TEXT          |                                        | Link hình ảnh sản phẩm |
+| created\_at     | DATETIME      | DEFAULT CURRENT\_TIMESTAMP             | Ngày tạo sản phẩm      |
 
 #### Bảng `categories`
-| Tên cột | Kiểu dữ liệu | Mô tả        |
-| ------- | ------------ | ------------ |
-| id      | INT (PK)     | Mã danh mục  |
-| name    | VARCHAR(100) | Tên danh mục |
+| Tên cột        | Kiểu dữ liệu | Ràng buộc                    | Mô tả                   |
+| -------------- | ------------ | ---------------------------- | ----------------------- |
+| category\_id   | INT          | PRIMARY KEY, AUTO\_INCREMENT | ID danh mục             |
+| category\_name | VARCHAR(100) | UNIQUE                       | Tên danh mục (duy nhất) |
 
 #### Bảng `orders`
-| Tên cột      | Kiểu dữ liệu                                            | Mô tả                  |
-| ------------ | ------------------------------------------------------- | ---------------------- |
-| id           | INT (PK)                                                | Mã đơn hàng            |
-| user\_id     | INT (FK)                                                | Người đặt đơn          |
-| total\_price | DECIMAL(10,2)                                           | Tổng tiền              |
-| status       | ENUM(Pending, Confirmed, Shipped, Delivered, Cancelled) | Trạng thái đơn hàng    |
-| created\_at  | DATETIME                                                | Thời gian tạo đơn hàng |
-
+| Tên cột           | Kiểu dữ liệu                                                       | Ràng buộc                     | Mô tả               |
+| ----------------- | ------------------------------------------------------------------ | ----------------------------- | ------------------- |
+| order\_id         | INT                                                                | PRIMARY KEY, AUTO\_INCREMENT  | ID đơn hàng         |
+| user\_id          | INT                                                                | FOREIGN KEY -> users.user\_id | Người đặt hàng      |
+| order\_date       | DATETIME                                                           | DEFAULT CURRENT\_TIMESTAMP    | Ngày đặt hàng       |
+| total\_amount     | DECIMAL(10,2)                                                      | NOT NULL                      | Tổng tiền           |
+| status            | ENUM('pending', 'processing', 'shipped', 'delivered', 'cancelled') | DEFAULT 'pending'             | Trạng thái đơn hàng |
+| shipping\_address | TEXT                                                               | NOT NULL                      | Địa chỉ giao hàng   |
 
 #### Bảng `order_items`
-| Tên cột     | Kiểu dữ liệu  | Mô tả                      |
-| ----------- | ------------- | -------------------------- |
-| id          | INT (PK)      | ID                         |
-| order\_id   | INT (FK)      | Liên kết đến đơn hàng      |
-| product\_id | INT (FK)      | Liên kết đến sản phẩm      |
-| quantity    | INT           | Số lượng                   |
-| unit\_price | DECIMAL(10,2) | Giá tại thời điểm đặt hàng |
+| Tên cột         | Kiểu dữ liệu  | Ràng buộc                                    | Mô tả                 |
+| --------------- | ------------- | -------------------------------------------- | --------------------- |
+| order\_item\_id | INT           | PRIMARY KEY, AUTO\_INCREMENT                 | ID chi tiết đơn hàng  |
+| order\_id       | INT           | FOREIGN KEY -> orders.order\_id              | Đơn hàng liên kết     |
+| variant\_id     | INT           | FOREIGN KEY -> product\_variants.variant\_id | Biến thể sản phẩm     |
+| quantity        | INT           | NOT NULL                                     | Số lượng mua          |
+| price           | DECIMAL(10,2) | NOT NULL                                     | Giá tại thời điểm mua |
+
+#### Bảng `product_variants`
+| Tên cột           | Kiểu dữ liệu  | Ràng buộc                           | Mô tả                              |
+| ----------------- | ------------- | ----------------------------------- | ---------------------------------- |
+| variant\_id       | INT           | PRIMARY KEY, AUTO\_INCREMENT        | ID biến thể                        |
+| product\_id       | INT           | FOREIGN KEY -> products.product\_id | Sản phẩm liên kết                  |
+| variant\_name     | VARCHAR(100)  | NOT NULL                            | Tên biến thể (VD: "8GB RAM - Đen") |
+| additional\_price | DECIMAL(10,2) |                                     | Giá cộng thêm của biến thể         |
+| stock\_quantity   | INT           |                                     | Số lượng tồn kho của biến thể      |
+
+#### Bảng `cart_items`
+| Tên cột        | Kiểu dữ liệu | Ràng buộc                                    | Mô tả                      |
+| -------------- | ------------ | -------------------------------------------- | -------------------------- |
+| cart\_item\_id | INT          | PRIMARY KEY, AUTO\_INCREMENT                 | ID sản phẩm trong giỏ hàng |
+| user\_id       | INT          | FOREIGN KEY -> users.user\_id                | Người dùng                 |
+| variant\_id    | INT          | FOREIGN KEY -> product\_variants.variant\_id | Biến thể sản phẩm          |
+| quantity       | INT          | NOT NULL                                     | Số lượng đặt               |
+| added\_at      | DATETIME     | DEFAULT CURRENT\_TIMESTAMP                   | Ngày thêm vào giỏ          |
 
 ### 3.3 Mối quan hệ giữa các bảng
-- `users` –< `orders` –< `order_items` >– `products`
+- `users` –< `orders` –< `order_items` >– `product_variants` >– `products`
 
 - `products` >– `categories`
 
-- `users` –< `cart_items` >– `products`
+- `users` –< `cart_items` >– `product_variants` >– `products`
 
+#### 🧭 Chi tiết mối quan hệ
 
-
+| Bảng cha (Parent)  | Bảng con (Child)   | Mối quan hệ | Ghi chú                                                |
+| ------------------ | ------------------ | ----------- | ------------------------------------------------------ |
+| `users`            | `cart_items`       | 1 - N       | Một user có nhiều mục trong giỏ hàng                   |
+| `users`            | `orders`           | 1 - N       | Một user có thể đặt nhiều đơn hàng                     |
+| `categories`       | `products`         | 1 - N       | Một danh mục chứa nhiều sản phẩm                       |
+| `products`         | `product_variants` | 1 - N       | Một sản phẩm có thể có nhiều biến thể (variant)        |
+| `product_variants` | `cart_items`       | 1 - N       | Một biến thể có thể xuất hiện nhiều lần trong giỏ hàng |
+| `orders`           | `order_items`      | 1 - N       | Một đơn hàng có nhiều mục sản phẩm                     |
+| `product_variants` | `order_items`      | 1 - N       | Một biến thể có thể xuất hiện trong nhiều đơn hàng     |
 
 
 
