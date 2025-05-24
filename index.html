@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechMart - Hệ thống thương mại điện tử chuyên ngành công nghệ</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        body {
+            background-color: #ffffff;
+            font-size: 16px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 2119px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        /* Header Styles */
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+            position: relative;
+        }
+        
+        .logo {
+            width: 175px;
+            height: 121px;
+            background-color: #d9d9d9;
+            margin-left: 139px;
+        }
+        
+        .expert-text {
+            font-size: 24px;
+            font-weight: 500;
+            color: #000000;
+            margin-left: 18px;
+        }
+        
+        .search-container {
+            margin-left: 50px;
+            position: relative;
+            width: 701px;
+        }
+        
+        .search-input {
+            width: 100%;
+            height: 88px;
+            border: 1px solid #000000;
+            padding: 0 20px;
+            font-size: 32px;
+            font-weight: 200;
+            background-color: #ffffff;
+        }
+        
+        .search-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 30px;
+        }
+        
+        .header-icons {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 139px;
+        }
+        
+        .icon-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 40px;
+        }
+        
+        .icon {
+            width: 87px;
+            height: 87px;
+        }
+        
+        .icon-text {
+            font-size: 32px;
+            font-weight: 600;
+            color: #000000;
+            margin-top: 10px;
+        }
+        
+        /* Navigation Styles */
+        .main-nav {
+            background-color: #3f9359;
+            height: 131px;
+            display: flex;
+            align-items: center;
+            padding: 0 139px;
+        }
+        
+        .nav-item {
+            color: #ffffff;
+            font-size: 36px;
+            font-weight: 500;
+            margin-right: 80px;
+            cursor: pointer;
+        }
+        
+        /* Hero Banner */
+        .hero-banner {
+            position: relative;
+            height: 896px;
+            margin-left: 138px;
+            margin-right: 138px;
+            overflow: hidden;
+        }
+        
+        .hero-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Product Features */
+        .product-features {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 139px;
+            background-color: #f5f5f5;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+        }
+        
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .feature-text {
+            font-size: 24px;
+            font-weight: 500;
+        }
+        
+        /* Category Tabs */
+        .category-tabs {
+            display: flex;
+            margin: 30px 139px;
+        }
+        
+        .tab {
+            height: 96px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 30px;
+            margin-right: 20px;
+            padding: 0 30px;
+            cursor: pointer;
+            font-size: 40px;
+            font-weight: 600;
+        }
+        
+        .tab.active {
+            background-color: #402e2e;
+            color: #ffffff;
+        }
+        
+        .tab.inactive {
+            background-color: #e6dfdf;
+            color: #000000;
+        }
+        
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 30px;
+            padding: 0 139px;
+            margin-bottom: 50px;
+        }
+        
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .product-image {
+            width: 175px;
+            height: 312px;
+            object-fit: contain;
+        }
+        
+        .product-name {
+            font-size: 36px;
+            font-weight: 500;
+            color: #000000;
+            text-align: center;
+            margin-top: 15px;
+        }
+        
+        /* Footer */
+        .footer-banner {
+            background-color: #d9d9d9;
+            height: 233px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 139px;
+        }
+        
+        .footer-title {
+            font-size: 48px;
+            font-weight: 700;
+            color: #000000;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 50px 139px;
+        }
+        
+        .footer-section h3 {
+            font-size: 40px;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section p {
+            font-size: 40px;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+        
+        .newsletter {
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+            margin-left: 108px;
+        }
+        
+        .email-input {
+            width: 640px;
+            height: 128px;
+            border: 1px solid #000000;
+            padding: 0 20px;
+            font-size: 40px;
+            font-weight: 600;
+            background-color: #ffffff;
+        }
+        
+        .subscribe-btn {
+            width: 276px;
+            height: 128px;
+            background-color: #ffffff;
+            border: 2px solid #000000;
+            border-radius: 30px;
+            font-size: 40px;
+            font-weight: 600;
+            color: #4cda68;
+            margin-left: 44px;
+            cursor: pointer;
+        }
+        
+        .social-icons {
+            display: flex;
+            margin-top: 30px;
+            margin-left: 108px;
+        }
+        
+        .social-icon {
+            width: 156px;
+            height: 128px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo"></div>
+            <p class="expert-text">Ask Our Experts</p>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search">
+                <div class="search-icon">🔍</div>
+            </div>
+            <div class="header-icons">
+                <div class="icon-container">
+                    <img src="../assets/images/img_image_1_97x97.png" alt="Notification Icon" class="icon">
+                </div>
+                <div class="icon-container">
+                    <img src="../assets/images/img_image_2_71x87.png" alt="Account Icon" class="icon">
+                    <p class="icon-text">Accout</p>
+                </div>
+                <div class="icon-container">
+                    <img src="../assets/images/img_image_71x87.png" alt="Cart Icon" class="icon">
+                    <p class="icon-text">My Cart</p>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Main Navigation -->
+        <nav class="main-nav">
+            <div class="nav-item">Phone</div>
+            <div class="nav-item">Laptop</div>
+            <div class="nav-item">Phụ kiện</div>
+            <div class="nav-item">More...</div>
+            <div class="nav-item">More...</div>
+            <div class="nav-item">More...</div>
+            <div class="nav-item">More...</div>
+            <div class="nav-item">More...</div>
+        </nav>
+        
+        <!-- Hero Banner -->
+        <div class="hero-banner">
+            <img src="../assets/images/img_image_3.png" alt="A35 Adventure Smartphone Promotion">
+        </div>
+        
+        <!-- Product Features -->
+        <div class="product-features">
+            <div class="feature">
+                <div class="feature-icon">📷</div>
+                <div class="feature-text">Camera 4x 50MP</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🔄</div>
+                <div class="feature-text">Màn hình 6.6" (90Hz)</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-text">Chip Unisoc T606</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🔋</div>
+                <div class="feature-text">Pin 5000mAh</div>
+            </div>
+        </div>
+        
+        <!-- Phone Category Section -->
+        <div class="category-tabs">
+            <div class="tab active">Điện thoại</div>
+            <div class="tab inactive">IPhone</div>
+            <div class="tab inactive">Samsung</div>
+            <div class="tab inactive">Xiaomi</div>
+            <div class="tab inactive">Oppo</div>
+            <div class="tab inactive">Realme</div>
+        </div>
+        
+        <!-- Phone Products Grid - Row 1 -->
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+        </div>
+        
+        <!-- Phone Products Grid - Row 2 -->
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+        </div>
+        
+        <!-- Phone Products Grid - Row 3 -->
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+        </div>
+        
+        <!-- Second Category Section -->
+        <div class="category-tabs">
+            <div class="tab active">Điện thoại</div>
+            <div class="tab inactive">IPhone</div>
+            <div class="tab inactive">Samsung</div>
+            <div class="tab inactive">Xiaomi</div>
+            <div class="tab inactive">Oppo</div>
+            <div class="tab inactive">Realme</div>
+        </div>
+        
+        <!-- Phone Products Grid - Row 4 -->
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+        </div>
+        
+        <!-- Phone Products Grid - Row 5 -->
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+        </div>
+        
+        <!-- Phone Products Grid - Row 6 -->
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+        </div>
+        
+        <!-- Accessories Category Section -->
+        <div class="category-tabs">
+            <div class="tab active">Phụ kiện</div>
+            <div class="tab inactive">Ốp lưng</div>
+            <div class="tab inactive">Sạc</div>
+            <div class="tab inactive">Phụ kiện</div>
+        </div>
+        
+        <!-- Accessories Products Grid - Row 1 -->
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+        </div>
+        
+        <!-- Accessories Products Grid - Row 2 -->
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+        </div>
+        
+        <!-- Accessories Products Grid - Row 3 -->
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+        </div>
+        
+        <!-- Macbook Category Section -->
+        <div class="category-tabs">
+            <div class="tab active">Macbook</div>
+            <div class="tab inactive">Macbook Air</div>
+            <div class="tab inactive">Macbook Pro</div>
+            <div class="tab inactive">Macbook</div>
+        </div>
+        
+        <!-- Macbook Products Grid - Row 1 -->
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+        </div>
+        
+        <!-- Macbook Products Grid - Row 2 -->
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+            <div class="product-card">
+                <img src="../assets/images/img_cateiphone16series29_1.png" alt="Phone" class="product-image">
+                <p class="product-name">Phone</p>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer-banner">
+            <h2 class="footer-title">TECHMART – Hệ thống thương mại điện tử chuyên ngành công nghệ</h2>
+        </div>
+        
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Hỗ trợ</h3>
+                <p>Hotline</p>
+                <p>09xx.xxx.xxx</p>
+                <p>Hotline</p>
+                <p>09xx.xxx.xxx</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Bảo hành</h3>
+                <p>Bảo hành mua hàng</p>
+                <p>Bảo mật thông tin</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Hệ thống mua hàng toàn quốc</h3>
+                <p>Khu vực miền bắc:</p>
+                <p>Khu vực miền trung:</p>
+                <p>Khu vực miền nam</p>
+            </div>
+        </div>
+        
+        <h3 style="text-align: center; font-size: 40px; font-weight: 600; margin-bottom: 30px;">Thông tin ưu đãi đặc biệt</h3>
+        
+        <div class="newsletter">
+            <input type="email" class="email-input" placeholder="Email">
+            <button class="subscribe-btn">Đăng ký</button>
+        </div>
+        
+        <div class="social-icons">
+            <img src="../assets/images/img_anh_man_hinh_20250524_luc_000806.png" alt="Social Icon" class="social-icon">
+            <img src="../assets/images/img_image.png" alt="Social Icon" class="social-icon">
+            <img src="../assets/images/img_image_128x156.png" alt="Social Icon" class="social-icon">
+            <img src="../assets/images/img_image_1.png" alt="Social Icon" class="social-icon">
+            <img src="../assets/images/img_image_2.png" alt="Social Icon" class="social-icon">
+        </div>
+    </div>
+
+    <script>
+        // Tab switching functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tab');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Find the parent category-tabs container
+                    const categoryTabsContainer = this.closest('.category-tabs');
+                    
+                    // Remove active class from all tabs in this container
+                    const siblingTabs = categoryTabsContainer.querySelectorAll('.tab');
+                    siblingTabs.forEach(siblingTab => {
+                        siblingTab.classList.remove('active');
+                        siblingTab.classList.add('inactive');
+                    });
+                    
+                    // Add active class to clicked tab
+                    this.classList.remove('inactive');
+                    this.classList.add('active');
+                });
+            });
+            
+            // Product card hover effect
+            const productCards = document.querySelectorAll('.product-card');
+            
+            productCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
+                    this.style.transition = 'all 0.3s ease';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = 'none';
+                });
+                
+                card.addEventListener('click', function() {
+                    alert('Product details page would open here');
+                });
+            });
+            
+            // Navigation item hover effect
+            const navItems = document.querySelectorAll('.nav-item');
+            
+            navItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.opacity = '0.8';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.opacity = '1';
+                });
+            });
+            
+            // Subscribe button functionality
+            const subscribeBtn = document.querySelector('.subscribe-btn');
+            const emailInput = document.querySelector('.email-input');
+            
+            subscribeBtn.addEventListener('click', function() {
+                if (emailInput.value.trim() === '') {
+                    alert('Please enter your email address');
+                } else if (!isValidEmail(emailInput.value)) {
+                    alert('Please enter a valid email address');
+                } else {
+                    alert('Thank you for subscribing to our newsletter!');
+                    emailInput.value = '';
+                }
+            });
+            
+            // Email validation function
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+            
+            // Search functionality
+            const searchInput = document.querySelector('.search-input');
+            const searchIcon = document.querySelector('.search-icon');
+            
+            searchIcon.addEventListener('click', function() {
+                if (searchInput.value.trim() !== '') {
+                    alert('Searching for: ' + searchInput.value);
+                }
+            });
+            
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter' && searchInput.value.trim() !== '') {
+                    alert('Searching for: ' + searchInput.value);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
