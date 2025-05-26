@@ -162,6 +162,10 @@ Cập nhật trạng thái đơn hàng (chờ xác nhận, đã giao...).
 ### Sơ đồ Use Case
 
 ### Sơ đồ ERD
+<img src="Document/Public/ER.png">
+
+### Mô hình quan hệ
+<img src="Document/Public/mohinhquanhe.png">
 
 ### Sơ đồ luồng dữ liệu (DFD)
 
