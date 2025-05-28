@@ -16814,11 +16814,11 @@
 .frame1-component7 {
   gap: 10px;
   top: 94.12000274658203px;
-  left: 15px;
+  left: 18px;
   width: 1140px;
   height: 370px;
-  display: flex;
   overflow: hidden;
+  display: flex;
   position: absolute;
   align-items: flex-start;
   flex-shrink: 0;
@@ -17734,31 +17734,9 @@
   background-image: url("public/external/tq_ghumtdi-tq-p4t7-1500h.png");
 }
 
-.frame1-button-nextslide {
-  width: 27px;
-  height: 50px;
-  display: flex;
-  padding: 0 0 0 5px;
-  z-index: 5;
-  align-items: center;
-  flex-shrink: 0;
-  border-radius: 100px 0 0 100px;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.30000001192092896);
-}
 
-.frame1-text941 {
-  color: rgba(255, 255, 255, 1);
-  height: auto;
-  font-size: 9px;
-  font-style: Semi Bold;
-  text-align: left;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: 18px;
-  font-stretch: normal;
-  text-decoration: none;
-}
+
+
 
 .frame1-button-previousslide {
   width: 27px;
