@@ -21,7 +21,7 @@
 }
 
 .frame1-footer {
-  top: 6088px;
+  top: 6100px;
   left: -5px;
   width: 1920px;
   height: 409.7498779296875px;
@@ -326,7 +326,7 @@
   top: 17.912569046020508px;
   left: 849.6599731445312px;
   width: 399.5px;
-  height: 24.24397087097168px;
+  height: 32px;
   display: flex;
   padding: 0 71.94000244140625px 0 3px;
   position: absolute;
@@ -335,7 +335,7 @@
 }
 
 .frame1-item1 {
-  height: 24.24397087097168px;
+  height: 35px;
   display: flex;
   padding: 1.2999999523162842px 11px 1.8899999856948853px;
   align-self: stretch;
@@ -367,7 +367,7 @@
 }
 
 .frame1-item2 {
-  height: 24.24397087097168px;
+  height: 35px;
   display: flex;
   padding: 1.2999999523162842px 11px 1.8899999856948853px;
   align-self: stretch;
@@ -399,7 +399,7 @@
 }
 
 .frame1-item3 {
-  height: 24.24397087097168px;
+  height: 35px;
   display: flex;
   padding: 1.2999999523162842px 11px 1.8899999856948853px;
   align-self: stretch;
@@ -431,10 +431,10 @@
 }
 
 .frame1-background-border {
-  top: 45.60122299194336px;
+  top: 55px;
   left: 849.6599731445312px;
   width: 399.5px;
-  height: 180.5655517578125px;
+  height: 265px;
   display: flex;
   padding: 1px;
   position: absolute;
@@ -1336,7 +1336,7 @@
 }
 
 .frame1-component62 {
-  top: 5902px;
+  top: 5957px;
   left: 10px;
   width: 1170px;
   height: 54px;
@@ -1365,7 +1365,7 @@
 }
 
 .frame1-section1 {
-  top: 892px;
+  top: 945px;
   left: 0px;
   width: 1175px;
   height: 4975px;
@@ -1387,7 +1387,6 @@
 }
 
 .frame1-container11 {
-  gap: 190.94000244140625px;
   top: 0px;
   left: 0px;
   width: 1170px;
@@ -4662,7 +4661,6 @@
 }
 
 .frame1-container13 {
-  gap: 141.1999969482422px;
   top: 0px;
   left: 0px;
   width: 1170px;
@@ -4706,10 +4704,9 @@
 }
 
 .frame1-container14 {
-  width: 788.7999877929688px;
+  width: 872px;
   height: 55px;
   display: flex;
-  overflow: hidden;
   position: relative;
   align-items: flex-start;
   flex-shrink: 0;
@@ -4721,7 +4718,6 @@
   left: 0px;
   width: 867px;
   display: flex;
-  padding: 0 10px 0 5px;
   position: absolute;
   align-items: center;
 }
@@ -8212,7 +8208,6 @@
 }
 
 .frame1-container15 {
-  gap: 483.8399963378906px;
   top: 0px;
   left: 0px;
   width: 1170px;
@@ -15731,7 +15726,7 @@
   top: 223px;
   left: 101.55000305175781px;
   color: rgba(158, 158, 158, 1);
-  width: 59px;
+  width: 63px;
   height: auto;
   position: absolute;
   font-size: 12px;
@@ -16288,7 +16283,7 @@
   top: 209.3800048828125px;
   left: 101.69000244140625px;
   color: rgba(158, 158, 158, 1);
-  width: 59px;
+  width: 63px;
   height: auto;
   position: absolute;
   font-size: 12px;
@@ -16592,6 +16587,10 @@
   text-decoration: none;
 }
 
+.frame1-section2{
+  align-items: center;
+}
+
 .frame1-section2 {
   top: 481px;
   left: 4px;
@@ -16604,7 +16603,7 @@
     rgba(147, 41, 30, 1) 0%,
     rgba(237, 33, 58, 1) 100%
   );
-  align-items: flex-start;
+  align-items: center;
   flex-shrink: 0;
   border-radius: 10px;
 }
@@ -16648,12 +16647,14 @@
   display: flex;
   position: absolute;
   box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.20000000298023224);
-  align-items: flex-start;
+  align-items: center;
   flex-shrink: 0;
   border-radius: 8px;
   justify-content: center;
   background-color: rgba(255, 255, 255, 1);
 }
+
+
 
 .frame1-background-shadow228 {
   top: 36.560001373291016px;
@@ -16810,6 +16811,14 @@
   justify-content: center;
   background-color: rgba(255, 255, 255, 1);
 }
+
+.frame1-background-shadow227,.frame1-background-shadow228,.frame1-background-shadow229,
+.frame1-background-shadow230,.frame1-background-shadow231,.frame1-background-shadow232,
+.frame1-background-shadow233,.frame1-background-shadow234 {
+  align-items: center;
+}
+
+
 
 .frame1-component7 {
   gap: 10px;
@@ -16997,6 +17006,20 @@
   font-stretch: normal;
   text-decoration: none;
 }
+
+div[class^="frame1tecnombn1t"] {
+  height:0px;
+}
+
+div[class^="frame1-frame1i112-"] {
+  height:0px;
+}
+
+.frame1-component7 .frame1-group215 .frame1-frame1i112-thng49,
+.frame1-component7 .frame1-group315 .frame1-frame1i112-thng50,
+.frame1-component7 .frame1-group415 .frame1-frame1i112-thng51,
+.frame1-component7 .frame1-group515 .frame1-frame1i112-thng52,
+.frame1-component7 .frame1-group615 .frame1-frame1i112-thng53,
 
 .frame1-frame1i112-thng49 {
   width: 220px;
