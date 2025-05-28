@@ -598,7 +598,7 @@
 
 .frame1-component1118 {
   top: 4.5px;
-  left: 260.20001220703125px;
+  left: 160.20001220703125px;
   width: 91px;
   display: flex;
   position: absolute;
@@ -631,9 +631,9 @@
 
 .frame1-text141 {
   top: -1.5px;
-  left: 338.5px;
+  left: 228.5px;
   color: rgba(51, 51, 51, 1);
-  width: 25px;
+  width: 120px;
   height: auto;
   position: absolute;
   font-size: 13px;
@@ -720,7 +720,7 @@
   top: 4.5px;
   left: 25px;
   color: rgba(51, 51, 51, 1);
-  width: 178px;
+  width: 122px;
   height: auto;
   position: absolute;
   font-size: 13px;
@@ -735,7 +735,7 @@
 
 .frame1-component1119 {
   top: 4.5px;
-  left: 210.42999267578125px;
+  left: 140.42999267578125px;
   width: 94px;
   display: flex;
   position: absolute;
@@ -768,9 +768,9 @@
 
 .frame1-text147 {
   top: -1.5px;
-  left: 291.75px;
+  left: 221.75px;
   color: rgba(51, 51, 51, 1);
-  width: 44px;
+  width: 120px;
   height: auto;
   position: absolute;
   font-size: 13px;
@@ -871,7 +871,7 @@
 
 .frame1-component1120 {
   top: 4.5px;
-  left: 215.1699981689453px;
+  left: 155.1699981689453px;
   width: 86px;
   display: flex;
   position: absolute;
@@ -904,9 +904,9 @@
 
 .frame1-text153 {
   top: -1.5px;
-  left: 286.9800109863281px;
+  left: 226.9800109863281px;
   color: rgba(51, 51, 51, 1);
-  width: 44px;
+  width: 120px;
   height: auto;
   position: absolute;
   font-size: 13px;
@@ -1117,7 +1117,7 @@
 
 .frame1-component1122 {
   top: 4.5px;
-  left: 266.2900085449219px;
+  left: 259.2900085449219px;
   width: 91px;
   display: flex;
   position: absolute;
@@ -16587,7 +16587,7 @@
   text-decoration: none;
 }
 
-.frame1-section2{
+.frame1-section2 {
   align-items: center;
 }
 
@@ -16653,8 +16653,6 @@
   justify-content: center;
   background-color: rgba(255, 255, 255, 1);
 }
-
-
 
 .frame1-background-shadow228 {
   top: 36.560001373291016px;
@@ -16812,13 +16810,16 @@
   background-color: rgba(255, 255, 255, 1);
 }
 
-.frame1-background-shadow227,.frame1-background-shadow228,.frame1-background-shadow229,
-.frame1-background-shadow230,.frame1-background-shadow231,.frame1-background-shadow232,
-.frame1-background-shadow233,.frame1-background-shadow234 {
+.frame1-background-shadow227,
+.frame1-background-shadow228,
+.frame1-background-shadow229,
+.frame1-background-shadow230,
+.frame1-background-shadow231,
+.frame1-background-shadow232,
+.frame1-background-shadow233,
+.frame1-background-shadow234 {
   align-items: center;
 }
-
-
 
 .frame1-component7 {
   gap: 10px;
@@ -17008,11 +17009,15 @@
 }
 
 div[class^="frame1tecnombn1t"] {
-  height:0px;
+  height: 0px;
+}
+
+div[class^="frame1"] {
+  z-index: 0;
 }
 
 div[class^="frame1-frame1i112-"] {
-  height:0px;
+  height: 0px;
 }
 
 .frame1-component7 .frame1-group215 .frame1-frame1i112-thng49,
@@ -17020,7 +17025,6 @@ div[class^="frame1-frame1i112-"] {
 .frame1-component7 .frame1-group415 .frame1-frame1i112-thng51,
 .frame1-component7 .frame1-group515 .frame1-frame1i112-thng52,
 .frame1-component7 .frame1-group615 .frame1-frame1i112-thng53,
-
 .frame1-frame1i112-thng49 {
   width: 220px;
   height: 71.76000213623047px;
@@ -17756,10 +17760,6 @@ div[class^="frame1-frame1i112-"] {
   background-size: cover;
   background-image: url("public/external/tq_ghumtdi-tq-p4t7-1500h.png");
 }
-
-
-
-
 
 .frame1-button-previousslide {
   width: 27px;
@@ -18586,7 +18586,6 @@ div[class^="frame1-frame1i112-"] {
 
 .frame1-input-bncntmg {
   display: flex;
-  padding: 8.5px 62px 8.5px 14px;
   overflow: hidden;
   align-self: stretch;
   align-items: flex-start;
@@ -18937,4 +18936,10 @@ div[class^="frame1-frame1i112-"] {
 .frame1-component3282 {
   width: 16px;
   height: 16px;
+}
+
+input {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 4px;
 }
