@@ -5,6 +5,9 @@
   justify-content: center;
   width: 100%;
 }
+body {
+  position: absolute;
+}
 
 .login .overlap-wrapper {
   overflow: hidden;

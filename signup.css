@@ -6,6 +6,9 @@
   width: 100%;
 }
 
+body {
+  position: absolute;
+}
 .sign-up .overlap-wrapper {
   overflow: hidden;
   background-image: url(./public/img/2023_11_26_638366159843367754_hinh-nen-bien.webp);
