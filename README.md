@@ -23,8 +23,4 @@ This project uses  CSS for styling.
 
 ## 🙏 Acknowledgments
 
-- Built with [Rocket.new
-](https: //rocket.new)
 - Powered by HTML and CSS
-
-Built with ❤️ on Rocket.new
