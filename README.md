@@ -159,15 +159,101 @@ Cập nhật trạng thái đơn hàng (chờ xác nhận, đã giao...).
 | Tương thích          | Hoạt động tốt trên Chrome, Firefox, Edge.                                                      |
 
 ## 5. 🧠 Mô hình và sơ đồ (tóm tắt)
-### Sơ đồ Use Case
 
-### Sơ đồ ERD
-<img src="Document/Public/ER.png">
+### Mô hình ERD
+<img src="Document/Public/use-case/ER.png">
 
 ### Mô hình quan hệ
-<img src="Document/Public/mohinhquanhe.png">
+<img src="Document/Public/use-case/mohinhquanhe.png">
 
-### Sơ đồ luồng dữ liệu (DFD)
+### Sơ đồ Use Case
+#### Use case tổng quát
+##### Admin
+<img src="Document/Public/use-case/casetongquatadmin.png">
+
+##### Customer
+<img src="Document/Public/use-case/casetongquatadmin.png">
+
+#### Chi tiết use case sử dụng
+##### Admin
+###### Use case quản lý danh mục
+<img src="Document/Public/use-case/caadminquanlydanhmuc.png">
+
+###### Use case quản lý đơn hàng
+<img src="Document/Public/use-case/caadminquanlydonhang.png">
+
+###### Use case quản lý người dùng
+<img src="Document/Public/use-case/caadminquanlynguoidung.png">
+
+###### Use case quản lý sản phẩm
+<img src="Document/Public/use-case/caadminquanlysanpham.png">
+
+###### Use case thống kê doanh thu
+<img src="Document/Public/use-case/caadminthongkedoanhthu.png">
+
+##### Customer
+###### Use case quản lý giỏ hàng
+<img src="Document/Public/use-case/caquanlygiohang.png">
+
+###### Use case tạo đơn hàng
+<img src="Document/Public/use-case/cataodonhang.png">
+
+###### Use case thanh toán
+<img src="Document/Public/use-case/cathanhtoan.png">
+
+###### Use case thêm sản phẩm vào giỏ hàng
+<img src="Document/Public/use-case/cathemsanphamvaogiohang.png">
+
+###### Use case tìm kiếm sản phẩm
+<img src="Document/Public/use-case/catimkiemsanpham.png">
+
+###### Use case xem chi tiết sản phẩm
+<img src="Document/Public/use-case/caxemchitietsanpham.png">
+
+###### Use case xem danh sách sản phẩm
+<img src="Document/Public/use-case/caxemdanhsachsanpham.png">
+
+###### Use case xem lịch sử đơn hàng
+<img src="Document/Public/use-case/caxemlichsudonhang.png">
+
+### Biểu đồ tuần tự các chức năng cơ bản
+#### Biểu đồ tuần tự chức năng đăng nhập
+<img src="Document/Public/sequence-diagrams/bieudotuantuchucnangdangnhap.png">
+
+#### Biểu đồ tuần tự chức năng đăng kí
+<img src="Document/Public/sequence-diagrams/bieudotuantuchucnangdangki.png">
+
+#### Biểu đồ tuần tự chức năng đặt hàng
+<img src="Document/Public/sequence-diagrams/bieudotuantuchucnangdathang.png">
+
+#### Biểu đồ tuần tự chức năng duyệt đơn hàng
+<img src="Document/Public/sequence-diagrams/bieudotuantuchucnangduyetdonhang.png">
+
+#### Biểu đồ tuần tự chức năng thanh toán
+<img src="Document/Public/sequence-diagrams/bieudotuantuchucnangthanhtoan.png">
+
+#### Biểu đồ tuần tự chức năng tìm kiếm
+<img src="Document/Public/sequence-diagrams/bieudotuantuchucnangtimkiem.png">
+
+### Sơ đồ hoạt động các chức năng cơ bản
+#### Biểu đồ hoạt động chức năng đăng nhập
+<img src="Document/Public/activity-diagrams/bieudohoatdongchucnangdangnhap.png">
+
+#### Biểu đồ hoạt động chức năng đăng kí
+<img src="Document/Public/activity-diagrams/bieudohoatdongchucnangdangki.png">
+
+#### Biểu đồ hoạt động chức năng quản lý đơn hàng(Admin)
+<img src="Document/Public/activity-diagrams/bieudohoatdongchucnangquanlydonhang(admin).png">
+
+#### Biểu đồ hoạt động chức năng thanh toán
+<img src="Document/Public/activity-diagrams/bieudohoatdongchucnangthanhtoan.png">
+
+#### Biểu đồ hoạt động chức năng thêm sản phẩm vào giỏ hàng
+<img src="Document/Public/activity-diagrams/bieudohoatdongchucnangthemvaogiohang.png">
+
+#### Biểu đồ hoạt động chức năng tìm kiếm và xem chi tiết sản phẩm
+<img src="Document/Public/activity-diagrams/bieudohoatdongchucnangtimkiemvaxemsanpham.png">
+
 
 # 🏗️ THIẾT KẾ CHƯƠNG TRÌNH
 
