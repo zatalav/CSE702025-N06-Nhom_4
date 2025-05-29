@@ -1,0 +1,261 @@
+[
+  {
+    "id": 1,
+    "category": "iphone",
+    "name": "iphone 16 Pro Max 256GB Chính Hãng VN/A",
+    "price": 29990000,
+    "description": "Chi tiết iphone 1...",
+    "image": "img/ip1.jpg"
+  },
+  {
+    "id": 2,
+    "category": "iphone",
+    "name": "iPhone 15 Pro Max 512GB VN/A - Tặng BH rơi vỡ vào nước",
+    "price": 30990000,
+    "description": "Chi tiết iphone 2...",
+    "image": "img/ip2.jpg"
+  },
+  {
+    "id": 3,
+    "category": "iphone",
+    "name": "iPhone 13 128GB chính hãng VN/A - Tặng BH rơi vỡ vào nước",
+    "price": 11590000,
+    "description": "Chi tiết iphone 3...",
+    "image": "img/ip3.jpg"
+  },
+  {
+    "id": 4,
+    "category": "iphone",
+    "name": "iPhone 16 Pro Max 512GB Chính Hãng VN/A",
+    "price": 36490000,
+    "description": "Chi tiết iphone 4...",
+    "image": "img/ip4.jpg"
+  },
+  {
+    "id": 5,
+    "category": "iphone",
+    "name": "iphone 16 Plus 128GB Chính Hãng VN/A",
+    "price": 21890000,
+    "description": "Chi tiết iphone 5...",
+    "image": "img/ip5.jpg"
+  },
+  {
+    "id": 6,
+    "category": "iphone",
+    "name": "iPhone 12 64GB Chính hãng VN/A - Tặng BH rơi vỡ vào nước",
+    "price": 9990000,
+    "description": "Chi tiết iphone 6...",
+    "image": "img/ip6.jpg"
+  },
+  {
+    "id": 7,
+    "category": "iphone",
+    "name": "iPhone 11 64GB chính hãng VN/A - Tặng BH rơi vỡ vào nước",
+    "price": 8790000,
+    "description": "Chi tiết iphone 7...",
+    "image": "img/ip7.jpg"
+  },
+  {
+    "id": 8,
+    "category": "iphone",
+    "name": "iPhone 15 Plus 128GB VN/A - Tặng BH rơi vỡ vào nước",
+    "price": 18890000,
+    "description": "Chi tiết iphone 8...",
+    "image": "img/ip8.jpg"
+  },
+
+  {
+    "id": 9,
+    "category": "mac",
+    "name": "MacBook Air M1 2020 13 inch 8GB 256GB - 1 đổi 1 12 tháng",
+    "price": 16290000,
+    "description": "Chi tiết Mac 1...",
+    "image": "img/m1.jpg"
+  },
+  {
+    "id": 10,
+    "category": "mac",
+    "name": "Macbook Air M2 13.6 inch 8GPU 16GB 256GB - 1 đổi 1 12 tháng",
+    "price": 20490000,
+    "description": "Chi tiết Mac 2...",
+    "image": "img/m2.jpg"
+  },
+  {
+    "id": 11,
+    "category": "mac",
+    "name": "Macbook Air M4 13.6 Inches 10 CPU 8GPU 16GB 256GB - 1 đổi 1 12 tháng",
+    "price": 26290000,
+    "description": "Chi tiết Mac 3...",
+    "image": "img/m3.jpg"
+  },
+  {
+    "id": 12,
+    "category": "mac",
+    "name": "Macbook Air M4 13.6 Inches 10 CPU 10 GPU 16GB 512GB - 1 đổi 1 12 tháng",
+    "price": 31290000,
+    "description": "Chi tiết Mac 4...",
+    "image": "img/m4.jpg"
+  },
+  {
+    "id": 13,
+    "category": "mac",
+    "name": "Macbook Air M4 13.6 Inches 10 CPU 10 GPU 24GB 512GB - 1 đổi 1 12 tháng",
+    "price": 35990000,
+    "description": "Chi tiết Mac 5...",
+    "image": "img/m5.jpg"
+  },
+  {
+    "id": 14,
+    "category": "mac",
+    "name": "Macbook Air M3 2024 13.6 Inches 8 GPU 16GB 256GB - 1 đổi 1 12 tháng",
+    "price": 25490000,
+    "description": "Chi tiết Mac 6...",
+    "image": "img/m6.webp"
+  },
+  {
+    "id": 15,
+    "category": "mac",
+    "name": "Macbook Air M3 2024 13.6 Inches 10 GPU 16GB 256GB - 1 đổi 1 12 tháng",
+    "price": 28990000,
+    "description": "Chi tiết Mac 7...",
+    "image": "img/m7.jpeg"
+  },
+  {
+    "id": 16,
+    "category": "mac",
+    "name": "Macbook Pro 14 inch M4 10CPU 10GPU 16GB 512GB - 1 đổi 1 12 tháng",
+    "price": 38490000,
+    "description": "Chi tiết Mac 8...",
+    "image": "img/m8.jpeg"
+  },
+  {
+    "id": 17,
+    "category": "samsung",
+    "name": "Samsung Galaxy S25 Ultra (5G) 12GB 256GB - 1 đổi 1 12 tháng",
+    "price": 26490000,
+    "description": "Chi tiết iphone 2...",
+    "image": "img/ss1.jpg"
+  },
+  {
+    "id": 18,
+    "category": "samsung",
+    "name": "Samsung Galaxy S24 Ultra (5G) 12GB 256GB - 1 đổi 1 12 tháng",
+    "price": 22190000,
+    "description": "Chi tiết iphone 3...",
+    "image": "img/ss4.jpg"
+  },
+  {
+    "id": 19,
+    "category": "samsung",
+    "name": "Samsung Galaxy Z Fold6 (5G) 12GB 256GB - 1 Đổi 1 12 Tháng",
+    "price": 34990000,
+    "description": "Chi tiết iphone 4...",
+    "image": "img/ss5.jpg"
+  },
+  {
+    "id": 20,
+    "category": "samsung",
+    "name": "Samsung Galaxy Z Flip6 (5G) 12GB 256GB - 1 Đổi 1 12 Tháng",
+    "price": 20990000,
+    "description": "Chi tiết iphone 5...",
+    "image": "img/ss6.jpg"
+  },
+  {
+    "id": 21,
+    "category": "samsung",
+    "name": "Samsung Galaxy A16 (5G) 8GB 128GB - 1 Đổi 1 12 Tháng",
+    "price": 5190000,
+    "description": "Chi tiết iphone 6...",
+    "image": "img/ss7.jpg"
+  },
+  {
+    "id": 22,
+    "category": "samsung",
+    "name": "Samsung Galaxy M15 (5G) 4GB 128GB - 1 Đổi 1 12 Tháng",
+    "price": 3690000,
+    "description": "Chi tiết iphone 7...",
+    "image": "img/ss8.jpg"
+  },
+  {
+    "id": 23,
+    "category": "samsung",
+    "name": "Samsung Galaxy Z Fold5 12GB 512GB - 1 Đổi 1 12 Tháng",
+    "price": 24990000,
+    "description": "Chi tiết iphone 8...",
+    "image": "img/ss9.jpg"
+  },
+
+  {
+    "id": 24,
+    "category": "samsung",
+    "name": "Samsung Galaxy A06 (5G) 4GB 128GB - 1 Đổi 1 12 Tháng",
+    "price": 2990000,
+    "description": "Chi tiết Mac 1...",
+    "image": "img/ss10.jpg"
+  },
+  {
+    "id": 25,
+    "category": "phukien",
+    "name": "Combo Sạc Cáp Pisen Quick PD C-Lightning 20w Màu Trắng - TS-C135B",
+    "price": 399000,
+    "description": "Chi tiết iphone 2...",
+    "image": "img/pk1.webp"
+  },
+  {
+    "id": 26,
+    "category": "phukien",
+    "name": "Ốp Lưng Clear Case Magsafe iPhone 16 Pro Chính Hãng",
+    "price": 1090000,
+    "description": "Chi tiết iphone 3...",
+    "image": "img/pk2.webp"
+  },
+  {
+    "id": 27,
+    "category": "phukien",
+    "name": "Sạc Pisen QUICK ice Crystal Colorful PD 30W XY-C14",
+    "price": 290000,
+    "description": "Chi tiết iphone 4...",
+    "image": "img/pk3.webp"
+  },
+  {
+    "id": 28,
+    "category": "phukien",
+    "name": "Sạc Dự Phòng Samsung 10000mAh 25W Chính Hãng",
+    "price": 890000,
+    "description": "Chi tiết iphone 5...",
+    "image": "img/pk4.jpg"
+  },
+  {
+    "id": 29,
+    "category": "phukien",
+    "name": "Ôp Lưng Kèm Khe Đựng Thẻ Samsung Galaxy A14 Chính Hãng",
+    "price": 149000,
+    "description": "Chi tiết iphone 6...",
+    "image": "img/pk5.webp"
+  },
+  {
+    "id": 30,
+    "category": "phukien",
+    "name": "Cáp Anker 542 USB C to Lightning Bio-Based 1.8m 30w - A80B1 ( chuẩn MFI)",
+    "price": 299000,
+    "description": "Chi tiết iphone 7...",
+    "image": "img/pk6.webp"
+  },
+  {
+    "id": 31,
+    "category": "phukien",
+    "name": "Ốp lưng kèm bút S Pen Galaxy Z Fold 6",
+    "price": 1190000,
+    "description": "Chi tiết iphone 8...",
+    "image": "img/pk7.jpg"
+  },
+
+  {
+    "id": 32,
+    "category": "phukien",
+    "name": "Tai Nghe Bluetooth True Wireless Realme Buds T300 ",
+    "price": 590000,
+    "description": "Chi tiết Mac 1...",
+    "image": "img/pk10.webp"
+  }
+]

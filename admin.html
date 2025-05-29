@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin - Quản lý tài khoản</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      .btn {
+        padding: 4px 10px;
+        margin-right: 5px;
+        cursor: pointer;
+      }
+      .btn.edit {
+        background: #007bff;
+        color: white;
+      }
+      .btn.delete {
+        background: #dc3545;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Quản lý tài khoản người dùng</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Họ tên</th>
+          <th>Số điện thoại</th>
+          <th>Email</th>
+          <th>Vai trò</th>
+          <th>Hành động</th>
+        </tr>
+      </thead>
+      <tbody id="user-table"></tbody>
+    </table>
+
+    <script>
+        //phân quyền
+      const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+      if (!currentUser || currentUser.role !== "admin") {
+        alert("Bạn không có quyền truy cập trang này.");
+        window.location.href = "index.html";
+      }
+      //quản lý
+      let users = [];
+
+      async function loadUsers() {
+        try {
+          const res = await fetch("users.json");
+          users = await res.json();
+          renderTable();
+        } catch (err) {
+          alert("Không thể tải danh sách người dùng.");
+        }
+      }
+
+      function renderTable() {
+        const table = document.getElementById("user-table");
+        table.innerHTML = "";
+
+        users.forEach((u, i) => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+          <td><input type="text" value="${
+            u.name
+          }" onchange="updateField(${i}, 'name', this.value)"></td>
+          <td><input type="text" value="${
+            u.phone
+          }" onchange="updateField(${i}, 'phone', this.value)"></td>
+          <td><input type="text" value="${
+            u.email || ""
+          }" onchange="updateField(${i}, 'email', this.value)"></td>
+          <td><input type="text" value="${
+            u.role || "user"
+          }" onchange="updateField(${i}, 'role', this.value)"></td>
+          <td>
+            <button class="btn delete" onclick="deleteUser(${i})">Xoá</button>
+          </td>
+        `;
+          table.appendChild(row);
+        });
+      }
+
+      function updateField(index, field, value) {
+        users[index][field] = value;
+        saveUsers();
+      }
+
+      function deleteUser(index) {
+        if (confirm("Bạn có chắc muốn xoá người dùng này?")) {
+          users.splice(index, 1);
+          saveUsers();
+          renderTable();
+        }
+      }
+
+      function saveUsers() {
+        // Chỉ dùng được nếu có backend, ở đây demo tạm bằng localStorage:
+        localStorage.setItem("users-admin", JSON.stringify(users));
+      }
+
+      loadUsers();
+    </script>
+  </body>
+</html>

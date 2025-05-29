@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tech Mart</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div
+      class="top-bar"
+      style="
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f8f9fa;
+        padding: 10px 20px;
+        border-bottom: 1px solid #ccc;
+      "
+    >
+      <div><strong>Tech Mart</strong></div>
+      <!-- Modal đăng nhập/đăng ký -->
+      <div id="login-modal" class="modal-overlay">
+        <div class="auth-box">
+          <button class="close-btn" onclick="closeModal()">×</button>
+
+          <div id="login-form">
+            <img src="img/logo.png" alt="Tech Mart" class="logo" />
+            <input
+              type="text"
+              id="username"
+              placeholder="Số điện thoại hoặc email"
+            />
+            <input type="password" id="password" placeholder="Mật khẩu" />
+            <button id="login-btn" onclick="login()">Đăng nhập</button>
+            <p class="or-login">Hoặc đăng nhập với Zalo hoặc Google</p>
+            <p class="switch-form">
+              Chưa có tài khoản? <span onclick="showRegister()">Đăng ký</span>
+            </p>
+          </div>
+
+          <div id="register-form" style="display: none">
+            <img src="img/logo.png" alt="Tech Mart" class="logo" />
+            <input type="text" id="register-name" placeholder="Họ tên" />
+            <input
+              type="text"
+              id="register-phone"
+              placeholder="Số điện thoại"
+            />
+            <input
+              type="email"
+              id="register-email"
+              placeholder="Email (không bắt buộc)"
+            />
+            <input type="password" id="register-pass" placeholder="Mật khẩu" />
+            <input
+              type="password"
+              id="register-repass"
+              placeholder="Nhập lại mật khẩu"
+            />
+            <button class="btn red" onclick="signup()">Đăng ký</button>
+            <p class="switch-form">
+              Đã có tài khoản? <span onclick="showLogin()">Đăng nhập</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div id="user-actions">
+          <button onclick="toggleLogin()" id="login-btn">
+            Đăng nhập / Đăng ký
+          </button>
+        </div>
+        <button onclick="toggleCart()">Giỏ hàng</button>
+      </div>
+    </div>
+
+    <div class="product-section" id="iphone-section">
+      <h2>iPhone</h2>
+      <div class="product-grid" id="iphone-grid"></div>
+    </div>
+
+    <div class="product-section" id="mac-section">
+      <h2>Macbook</h2>
+      <div class="product-grid" id="mac-grid"></div>
+    </div>
+
+    <div class="product-section" id="samsung-section">
+      <h2>Samsung</h2>
+      <div class="product-grid" id="samsung-grid"></div>
+    </div>
+
+    <div class="product-section" id="phukien-section">
+      <h2>Phụ Kiện</h2>
+      <div class="product-grid" id="phukien-grid"></div>
+    </div>
+
+    <!-- Modal xem chi tiết sản phẩm -->
+    <div id="product-modal">
+      <div id="modal-content">
+        <button id="modal-close">&times;</button>
+        <h2 id="modal-name"></h2>
+        <img id="modal-img" src="" alt="" />
+        <p id="modal-price"></p>
+        <p id="modal-description"></p>
+        <button id="modal-buy" class="btn-buy">Mua hàng</button>
+      </div>
+    </div>
+
+    <!-- Giỏ hàng -->
+    <div class="cart">
+      <h2>Giỏ hàng</h2>
+      <div id="cart-items">Chưa có sản phẩm nào.</div>
+      <div id="cart-total"></div>
+    </div>
+
+    <!--  -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

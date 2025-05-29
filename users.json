@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Manh",
+    "phone": "123",
+    "email": "manh@gmail.com",
+    "pass": "123",
+    "role": "user"
+  },
+  {
+    "name": "Manh",
+    "phone": "999",
+    "email": "manh@gmail.com",
+    "pass": "admin",
+    "role": "admin"
+  },
+  {
+    "name": "1",
+    "phone": "1",
+    "email": "1",
+    "pass": "1",
+    "role": "user"
+  }
+]
