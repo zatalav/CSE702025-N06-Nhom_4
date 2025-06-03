@@ -164,15 +164,15 @@ Cập nhật trạng thái đơn hàng (chờ xác nhận, đã giao...).
 <img src="Document/Public/use-case/ER.png">
 
 ### Mô hình quan hệ
-<img src="Document/Public/use-case/mohinhquanhe.png">
+<img src="Document/Public/use-case/mohinhquanhe1.png">
 
 ### Sơ đồ Use Case
 #### Use case tổng quát
 ##### Admin
-<img src="Document/Public/use-case/casetongquatadmin.png">
+<img src="Document/Public/use-case/catongquatadmin.png">
 
 ##### Customer
-<img src="Document/Public/use-case/casetongquatadmin.png">
+<img src="Document/Public/use-case/catongquatcustommer.png">
 
 #### Chi tiết use case sử dụng
 ##### Admin
